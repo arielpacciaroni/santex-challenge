@@ -1,18 +1,18 @@
 import styled from "styled-components";
 import { Product as ProductInterface } from "../graphql/queries";
-import { baseColors } from "../utils/baseColors";
 import { useMemo, useState } from "react";
+import Button from "./Button";
 
 const ProductWrapper = styled.div`
   background-color: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  border-radius: 0.5rem;
+  border-radius: ${props => props.theme.spacing.small};
 `;
 
 const ProductTitle = styled.h2`
   margin: 0;
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  padding: ${props => props.theme.spacing.small};
+  font-size: 1.6rem;
   font-weight: bold;
 `;
 
@@ -20,33 +20,21 @@ const ProductImage = styled.img`
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: ${props => props.theme.spacing.small};
+  border-top-right-radius: ${props => props.theme.spacing.small};
 `;
 
 const ProductDescription = styled.p`
-  padding: 0.5rem;
+  padding: ${props => props.theme.spacing.small};
+  color: #666;
 `
 
 const ProductActions = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem;
-`;
-
-const ProductActionButton = styled.button`
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: ${baseColors.success};
-  color: ${baseColors.highlight};
-  border-radius: 0.5rem;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #22c55e;
-  }
+  gap: ${props => props.theme.spacing.small};
+  margin: ${props => props.theme.spacing.small};
 `;
 
 interface ProductProps {
@@ -73,8 +61,8 @@ export function Product(props: ProductProps) {
         ))}
       </select>
       <ProductActions>
-        <p>Price: ${selectedVariant?.price}</p>
-        <ProductActionButton onClick={() => onAddToCart(selectedVariant.id)}>Buy</ProductActionButton>
+        <p>Price: ${selectedVariant.price}</p>
+        <Button onClick={() => onAddToCart(selectedVariant.id)} variant="primary">Buy</Button>
       </ProductActions>
     </ProductWrapper>
   )

@@ -1,9 +1,12 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  children: ReactNode;
+}
+
+export const Container = styled.div<ContainerProps>`
   width: 100%;
-  max-width: 740px;
+  max-width: 720px;
   margin: 0 auto;
 `;
-
-

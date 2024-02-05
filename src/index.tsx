@@ -12,6 +12,8 @@ import './index.css';
 import './reset.css';
 import reportWebVitals from './reportWebVitals';
 import { ProductContextProvider } from './components/ProductContext';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './utils/theme';
 
 const commerceLink = createHttpLink({
   uri: 'https://demo.vendure.io/shop-api',
@@ -43,7 +45,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <ProductContextProvider>
-        <App />
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </ProductContextProvider>
     </ApolloProvider>
   </React.StrictMode>,
