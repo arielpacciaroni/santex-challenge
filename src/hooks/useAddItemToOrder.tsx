@@ -1,8 +1,8 @@
-import { gql, useApolloClient, useMutation } from "@apollo/client";
-import { addItemToOrderMutation } from "../graphql/mutations";
-import { Variant } from "../graphql/queries";
-import { useContext } from "react";
-import ProductContext from "../components/ProductContext";
+import { gql, useApolloClient, useMutation } from '@apollo/client';
+import { addItemToOrderMutation } from '../graphql/mutations';
+import { Variant } from '../graphql/queries';
+import { useContext } from 'react';
+import ProductContext from '../components/ProductContext';
 
 interface ItemParams {
   productVariantId: string;
@@ -26,15 +26,15 @@ export function useAddItemToOrder() {
           price
         }
       `,
-    })
-    
-    if(variant) {
+    });
+
+    if (variant) {
       const subTotal = context.subTotal;
-      context.setSubTotal(subTotal + (variant.price * params.quantity));
+      context.setSubTotal(subTotal + variant.price * params.quantity);
     }
-  }
+  };
 
   return {
-    addItemToOrder
-  }
+    addItemToOrder,
+  };
 }

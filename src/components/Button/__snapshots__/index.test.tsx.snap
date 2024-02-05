@@ -1,47 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header component should render the header 1`] = `
+exports[`Button component should render a button 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <header
-        class="sc-gEvEer jPWZJI"
+      <button
+        class="sc-aXZVg bkOKcI"
       >
-        <div
-          class="sc-aXZVg dzdRUe"
-        >
-          <img
-            alt="Logo"
-            class="sc-eqUAAy fDhwdx"
-            src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
-          />
-          <p>
-            Your subtotal: $
-            0
-          </p>
-        </div>
-      </header>
+        Hello world!
+      </button>
     </div>
   </body>,
   "container": <div>
-    <header
-      class="sc-gEvEer jPWZJI"
+    <button
+      class="sc-aXZVg bkOKcI"
     >
-      <div
-        class="sc-aXZVg dzdRUe"
-      >
-        <img
-          alt="Logo"
-          class="sc-eqUAAy fDhwdx"
-          src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
-        />
-        <p>
-          Your subtotal: $
-          0
-        </p>
-      </div>
-    </header>
+      Hello world!
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -1,9 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-export default function useStateWithStorage<T>(
-  key: string,
-  defaultValue: T
-) {
+export default function useStateWithStorage<T>(key: string, defaultValue: T) {
   const [value, setValue] = useState<T>(() => {
     const storedValue = localStorage.getItem(key);
     return storedValue !== null ? JSON.parse(storedValue) : defaultValue;
@@ -16,4 +13,3 @@ export default function useStateWithStorage<T>(
 
   return [value, setValueWithStorage] as const;
 }
-

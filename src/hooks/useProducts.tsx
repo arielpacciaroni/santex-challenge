@@ -1,6 +1,6 @@
-import { useQuery } from "@apollo/client";
-import { Product, productsQuery } from "../graphql/queries";
-import { useMemo } from "react";
+import { useQuery } from '@apollo/client';
+import { Product, productsQuery } from '../graphql/queries';
+import { useMemo } from 'react';
 
 interface ProductParams {
   page: number;
@@ -11,21 +11,24 @@ interface ProductResults {
   products: {
     items: Product[];
     totalItems: number;
-  }
+  };
 }
 
 export function useProducts(params: ProductParams) {
   const { page, itemsPerPage } = params;
 
-  const { data, loading, error, fetchMore } = useQuery<ProductResults>(productsQuery, {
-    variables: {
-      limit: itemsPerPage * page,
-      offset: 0,
+  const { data, loading, error, fetchMore } = useQuery<ProductResults>(
+    productsQuery,
+    {
+      variables: {
+        limit: itemsPerPage * page,
+        offset: 0,
+      },
     }
-  });
+  );
 
   const hasNextPage = useMemo(() => {
-    if(!data) return false;
+    if (!data) return false;
 
     return data.products.totalItems > itemsPerPage * page;
   }, [data, page, itemsPerPage]);
@@ -36,5 +39,5 @@ export function useProducts(params: ProductParams) {
     error,
     fetchMore,
     hasNextPage,
-  }
+  };
 }

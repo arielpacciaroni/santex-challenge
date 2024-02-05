@@ -1,13 +1,11 @@
-import styled from "styled-components";
-import { useProductContext } from "../../hooks/useProductContext";
+import styled from 'styled-components';
+import { useProductContext } from '../../hooks/useProductContext';
+import { Container } from '../Container';
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.colors.secondary};
-  color: ${props => props.theme.colors.highlight};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: ${props => props.theme.spacing.medium};
+  background-color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.highlight};
+  padding: ${(props) => props.theme.spacing.medium};
 `;
 
 const Image = styled.img`
@@ -20,11 +18,13 @@ export function Header() {
 
   return (
     <HeaderWrapper>
-      <Image
-        src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
-        alt="Logo"
-      />
-      <p>${subTotal}</p>
+      <Container>
+        <Image
+          src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
+          alt="Logo"
+        />
+        <p>Your subtotal: ${subTotal}</p>
+      </Container>
     </HeaderWrapper>
   );
 }

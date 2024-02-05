@@ -1,18 +1,18 @@
-import { createContext, ReactNode } from 'react'
-import useStateWithStorage from '../hooks/useStateWithStorage'
+import { createContext, ReactNode } from 'react';
+import useStateWithStorage from '../hooks/useStateWithStorage';
 
 interface ProductContextValues {
-  subTotal: number
-  setSubTotal: (value: number) => void
+  subTotal: number;
+  setSubTotal: (value: number) => void;
 }
 
 const ProductContext = createContext<ProductContextValues>({
   subTotal: 0,
-  setSubTotal: () => {}
-})
+  setSubTotal: () => {},
+});
 
 interface ProductContextProviderProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 function ProductContextProvider({ children }: ProductContextProviderProps) {
@@ -22,8 +22,8 @@ function ProductContextProvider({ children }: ProductContextProviderProps) {
     <ProductContext.Provider value={{ subTotal, setSubTotal }}>
       {children}
     </ProductContext.Provider>
-  )
+  );
 }
 
-export { ProductContextProvider }
-export default ProductContext
+export { ProductContextProvider };
+export default ProductContext;
