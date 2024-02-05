@@ -9,10 +9,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
+import './reset.css';
 import reportWebVitals from './reportWebVitals';
+import { ProductContextProvider } from './components/ProductContext';
 
 const commerceLink = createHttpLink({
-  uri: 'https://demo.vendure.io/shop-api/shop-api',
+  uri: 'https://demo.vendure.io/shop-api',
   headers: {
     authorization: localStorage.getItem('Auth-Token')
       ? `Bearer ${localStorage.getItem('Auth-Token')}`
@@ -40,7 +42,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <ProductContextProvider>
+        <App />
+      </ProductContextProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
