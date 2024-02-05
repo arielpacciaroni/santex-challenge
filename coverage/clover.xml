@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1707162808561" clover="3.2.0">
+  <project timestamp="1707162808562" name="All files">
+    <metrics statements="32" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="18" elements="50" coveredelements="49" complexity="0" loc="32" ncloc="32" packages="5" files="8" classes="8"/>
+    <package name="components.Product">
+      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
+      <file name="index.tsx" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\components\Product\index.tsx">
+        <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="56" count="4" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="76" count="6" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Select">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\components\Select\index.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="graphql">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="queries.ts" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\graphql\queries.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Asset.ts" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\interfaces\Asset.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Product.ts" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\interfaces\Product.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="ProductVariant.ts" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\interfaces\ProductVariant.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="renderWithStyledProvider.tsx" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\utils\renderWithStyledProvider.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="8" type="stmt"/>
+      </file>
+      <file name="theme.ts" path="C:\Users\lonis\Documents\Proyectos\Santex\challenge\src\utils\theme.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

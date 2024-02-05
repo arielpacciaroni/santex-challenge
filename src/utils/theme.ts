@@ -1,6 +1,7 @@
 const colors = {
   'light-gray': '#f5f5f5',
   highlight: '#eee',
+  blend: '#ccc',
   success: '#15803d',
   secondary: '#1c1917',
   information: '#bfdbfe',
@@ -8,6 +9,8 @@ const colors = {
     'bg-primary': '#15803d',
     'bg-primary-hover': '#059669',
     'text-primary': '#dcfce7',
+    'bg-disabled': '#eee',
+    'text-disabled': '#aaa',
   },
 };
 

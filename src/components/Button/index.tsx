@@ -32,4 +32,10 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
 
   ${({ theme, variant }) => variantStyles(theme, variant)}
+
+  :disabled {
+    background-color: ${(props) => props.theme.colors.button['bg-disabled']};
+    color: ${(props) => props.theme.colors.button['text-disabled']};
+    cursor: not-allowed;
+  }
 `;

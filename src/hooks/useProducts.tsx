@@ -1,11 +1,6 @@
-import { useQuery } from '@apollo/client';
-import { Product, productsQuery } from '../graphql/queries';
-import { useMemo } from 'react';
-
-interface ProductParams {
-  page: number;
-  itemsPerPage: number;
-}
+import { useLazyQuery } from '@apollo/client';
+import { Product } from '../interfaces/Product';
+import { productsQuery } from '../graphql/queries';
 
 interface ProductResults {
   products: {
@@ -14,30 +9,21 @@ interface ProductResults {
   };
 }
 
-export function useProducts(params: ProductParams) {
-  const { page, itemsPerPage } = params;
-
-  const { data, loading, error, fetchMore } = useQuery<ProductResults>(
-    productsQuery,
-    {
+export function useProducts() {
+  const [fetchMore, { called, loading, data, error }] =
+    useLazyQuery<ProductResults>(productsQuery, {
       variables: {
-        limit: itemsPerPage * page,
+        limit: 6,
         offset: 0,
       },
-    }
-  );
-
-  const hasNextPage = useMemo(() => {
-    if (!data) return false;
-
-    return data.products.totalItems > itemsPerPage * page;
-  }, [data, page, itemsPerPage]);
+    });
 
   return {
     data: data?.products,
+    totalItems: data?.products.totalItems ?? 0,
     loading,
     error,
+    called,
     fetchMore,
-    hasNextPage,
   };
 }

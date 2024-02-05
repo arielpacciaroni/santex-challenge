@@ -1,11 +1,11 @@
 import { gql, useApolloClient, useMutation } from '@apollo/client';
 import { addItemToOrderMutation } from '../graphql/mutations';
-import { Variant } from '../graphql/queries';
+import { ProductVariant } from '../interfaces/ProductVariant';
 import { useContext } from 'react';
 import ProductContext from '../components/ProductContext';
 
 interface ItemParams {
-  productVariantId: string;
+  productVariantId: ProductVariant['id'];
   quantity: number;
 }
 
@@ -17,10 +17,10 @@ export function useAddItemToOrder() {
 
   const addItemToOrder = async (params: ItemParams) => {
     await mutateAddItemToOrder({ variables: params });
-    const variant = queryClient.readFragment<Variant>({
+    const variant = queryClient.readFragment<ProductVariant>({
       id: `ProductVariant:${params.productVariantId}`,
       fragment: gql`
-        fragment NewVariant on ProductVariant {
+        fragment Variant on ProductVariant {
           id
           name
           price

@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component should render a button 1`] = `
+exports[`Container component should render a container along with the children element 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="sc-aXZVg fmhrVe"
+      <div
+        class="sc-aXZVg dzdRUe"
       >
         Hello world!
-      </button>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="sc-aXZVg fmhrVe"
+    <div
+      class="sc-aXZVg dzdRUe"
     >
       Hello world!
-    </button>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
