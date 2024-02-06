@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Theme } from '../../utils/theme';
 import { HTMLProps } from 'react';
 
-type Variant = 'primary';
+type Variant = 'primary' | 'error';
 
 type ButtonProps = HTMLProps<HTMLButtonElement> & {
   variant: Variant;
@@ -18,7 +18,15 @@ const variantStyles = (theme: Theme, variant: Variant = 'primary') =>
         background-color: ${theme.colors.button['bg-primary-hover']};
       }
     `,
-  })[variant];
+    error: css`
+      color: ${theme.colors.button['text-error']};
+      background-color: ${theme.colors.button['bg-error']};
+
+      &:hover {
+        background-color: ${theme.colors.button['bg-error-hover']};
+      }
+    `,
+  }[variant]);
 
 export const Button = styled.button<ButtonProps>`
   border: none;
@@ -27,6 +35,7 @@ export const Button = styled.button<ButtonProps>`
     ${(props) => props.theme.spacing.medium};
   border-radius: ${(props) => props.theme.spacing.small};
   font-size: 0.875rem;
+  font-weight: 600;
   transition: all 0.3s;
   transition-delay: 100ms;
   cursor: pointer;

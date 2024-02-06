@@ -1,16 +1,19 @@
 const colors = {
-  'light-gray': '#f5f5f5',
+  'light-gray': '#f1f1f1',
   highlight: '#eee',
   blend: '#ccc',
   success: '#15803d',
-  secondary: '#1c1917',
+  secondary: '#171717',
   information: '#bfdbfe',
   button: {
-    'bg-primary': '#15803d',
-    'bg-primary-hover': '#059669',
+    'bg-primary': '#4d7c0f',
+    'bg-primary-hover': '#65a30d',
     'text-primary': '#dcfce7',
     'bg-disabled': '#eee',
     'text-disabled': '#aaa',
+    'bg-error': '#9a3412',
+    'bg-error-hover': '#ea580c',
+    'text-error': '#fff',
   },
 };
 

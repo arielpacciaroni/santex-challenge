@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { useProductContext } from '../../hooks/useProductContext';
 import { Container } from '../Container';
+import { Button } from '../Button';
+import { useCallback } from 'react';
 
 const HeaderWrapper = styled.header`
   background-color: ${(props) => props.theme.colors.secondary};
@@ -13,17 +15,39 @@ const Image = styled.img`
   height: auto;
 `;
 
+const HeaderMenu = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 520px) {
+    flex-direction: row;
+  }
+`;
+
 export function Header() {
-  const { subTotal } = useProductContext();
+  const { subTotal, setSubTotal } = useProductContext();
+
+  const handleClearCart = useCallback(() => {
+    setSubTotal(0);
+  }, [setSubTotal]);
 
   return (
     <HeaderWrapper>
       <Container>
-        <Image
-          src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
-          alt="Logo"
-        />
-        <p>Your subtotal: ${subTotal}</p>
+        <HeaderMenu>
+          <div>
+            <Image
+              src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
+              alt="Logo"
+            />
+            <p>Your subtotal: ${subTotal}</p>
+          </div>
+          <Button variant="error" onClick={handleClearCart}>
+            Clear cart
+          </Button>
+        </HeaderMenu>
       </Container>
     </HeaderWrapper>
   );
