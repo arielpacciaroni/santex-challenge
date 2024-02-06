@@ -6,6 +6,7 @@ import { useAddItemToOrder } from '../../hooks/useAddItemToOrder';
 import { Button } from '../Button';
 import styled from 'styled-components';
 import { Product as ProductInterface } from '../../interfaces/Product';
+import { ProductSkeleton } from '../ProductSkeleton';
 
 const ProductListActions = styled.div`
   width: 100%;
@@ -70,6 +71,7 @@ export function ProductList() {
   return (
     <>
       <ProductListWrapper>
+        {loading && <ProductSkeleton />}
         {products.map((product) => (
           <Product
             key={product.id}
