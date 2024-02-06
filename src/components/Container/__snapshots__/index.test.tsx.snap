@@ -3,18 +3,30 @@
 exports[`Container component should render a container along with the children element 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+<body>
     <div>
       <div
-        class="sc-aXZVg dzdRUe"
+        class="c0"
       >
         Hello world!
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .c0 {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+<div>
     <div
-      class="sc-aXZVg dzdRUe"
+      class="c0"
     >
       Hello world!
     </div>

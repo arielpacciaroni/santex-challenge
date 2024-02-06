@@ -4,3 +4,14 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
+
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  clear: jest.fn(),
+  length: 0,
+  key: jest.fn(),
+  removeItem: jest.fn(),
+};
+
+global.localStorage = localStorageMock;

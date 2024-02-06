@@ -1,9 +1,9 @@
 import { useApolloClient, useMutation } from '@apollo/client';
-import { addItemToOrderMutation } from '../graphql/mutations';
-import { ProductVariant } from '../interfaces/ProductVariant';
+import { addItemToOrderMutation } from '../../graphql/mutations';
+import { ProductVariant } from '../../interfaces/ProductVariant';
 import { useContext } from 'react';
-import ProductContext from '../components/ProductContext';
-import { productVariantFragment } from '../graphql/queries';
+import ProductContext from '../../components/ProductContext';
+import { productVariantFragment } from '../../graphql/queries';
 
 interface ItemParams {
   productVariantId: ProductVariant['id'];
