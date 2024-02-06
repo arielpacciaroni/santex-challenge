@@ -1,6 +1,6 @@
 import { useLazyQuery } from '@apollo/client';
-import { Product } from '../interfaces/Product';
-import { productsQuery } from '../graphql/queries';
+import { Product } from '../../interfaces/Product';
+import { productsQuery } from '../../graphql/queries';
 
 interface ProductResults {
   products: {

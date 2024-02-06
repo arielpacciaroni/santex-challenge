@@ -3,17 +3,34 @@
 exports[`Header component should render the header 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c1 {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #1c1917;
+  color: #eee;
+  padding: 1rem;
+}
+
+.c2 {
+  width: 100px;
+  height: auto;
+}
+
+<body>
     <div>
       <header
-        class="sc-gEvEer jPWZJI"
+        class="c0"
       >
         <div
-          class="sc-aXZVg dzdRUe"
+          class="c1"
         >
           <img
             alt="Logo"
-            class="sc-eqUAAy fDhwdx"
+            class="c2"
             src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
           />
           <p>
@@ -24,16 +41,33 @@ Object {
       </header>
     </div>
   </body>,
-  "container": <div>
+  "container": .c1 {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.c0 {
+  background-color: #1c1917;
+  color: #eee;
+  padding: 1rem;
+}
+
+.c2 {
+  width: 100px;
+  height: auto;
+}
+
+<div>
     <header
-      class="sc-gEvEer jPWZJI"
+      class="c0"
     >
       <div
-        class="sc-aXZVg dzdRUe"
+        class="c1"
       >
         <img
           alt="Logo"
-          class="sc-eqUAAy fDhwdx"
+          class="c2"
           src="https://santex.wpengine.com/wp-content/uploads/2019/02/logo-santex@3x.png"
         />
         <p>

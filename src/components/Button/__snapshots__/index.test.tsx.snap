@@ -3,18 +3,68 @@
 exports[`Button component should render a button 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  cursor: pointer;
+  color: #dcfce7;
+  background-color: #15803d;
+}
+
+.c0:hover {
+  background-color: #059669;
+}
+
+.c0:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+<body>
     <div>
       <button
-        class="sc-aXZVg fmhrVe"
+        class="c0"
       >
         Hello world!
       </button>
     </div>
   </body>,
-  "container": <div>
+  "container": .c0 {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  cursor: pointer;
+  color: #dcfce7;
+  background-color: #15803d;
+}
+
+.c0:hover {
+  background-color: #059669;
+}
+
+.c0:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+<div>
     <button
-      class="sc-aXZVg fmhrVe"
+      class="c0"
     >
       Hello world!
     </button>
