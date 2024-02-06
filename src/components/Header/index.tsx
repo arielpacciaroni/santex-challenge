@@ -17,8 +17,13 @@ const Image = styled.img`
 
 const HeaderMenu = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 520px) {
+    flex-direction: row;
+  }
 `;
 
 export function Header() {
@@ -26,7 +31,7 @@ export function Header() {
 
   const handleClearCart = useCallback(() => {
     setSubTotal(0);
-  }, []);
+  }, [setSubTotal]);
 
   return (
     <HeaderWrapper>

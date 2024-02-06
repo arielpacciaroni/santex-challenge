@@ -3,7 +3,7 @@ const colors = {
   highlight: '#eee',
   blend: '#ccc',
   success: '#15803d',
-  secondary: '#1c1917',
+  secondary: '#171717',
   information: '#bfdbfe',
   button: {
     'bg-primary': '#4d7c0f',
