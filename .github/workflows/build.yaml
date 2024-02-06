@@ -1,0 +1,45 @@
+name: Build and Deploy Workflow
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+  AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Delete S3 previous content
+        run: |
+          aws s3 rm s3://${{ secrets.AWS_BUCKET }} --recursive
+      
+      - name: Upload new content to S3
+        run: |
+          aws s3 sync build/. s3://${{ secrets.AWS_BUCKET }}
