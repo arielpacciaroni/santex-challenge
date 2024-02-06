@@ -25,10 +25,14 @@ const ProductInformation = styled.div`
 
 const ProductImage = styled.img`
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   border-top-left-radius: ${(props) => props.theme.spacing.small};
   border-top-right-radius: ${(props) => props.theme.spacing.small};
+
+  @media (min-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const ProductDescription = styled.p`

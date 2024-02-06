@@ -1,5 +1,20 @@
 import { gql } from '@apollo/client';
 
+export const productVariantFragment = gql`
+  fragment ProductVariantFields on ProductVariant {
+    id
+    name
+    price
+  }
+`;
+
+export const featuredAssetFieldsFragment = gql`
+  fragment FeaturedAssetFields on Asset {
+    id
+    preview
+  }
+`;
+
 export const productsQuery = gql`
   query Products($offset: Int, $limit: Int) {
     products(options: { take: $limit, skip: $offset }) {
@@ -8,16 +23,16 @@ export const productsQuery = gql`
         name
         description
         variants {
-          id
-          name
-          price
+          ...ProductVariantFields
         }
         featuredAsset {
-          id
-          preview
+          ...FeaturedAssetFields
         }
       }
       totalItems
     }
   }
+
+  ${productVariantFragment}
+  ${featuredAssetFieldsFragment}
 `;

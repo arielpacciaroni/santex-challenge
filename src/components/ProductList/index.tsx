@@ -15,6 +15,7 @@ const ProductListActions = styled.div`
 `;
 
 const productsPerPage = 6;
+
 export function ProductList() {
   const [disableLoadMoreButton, setDisableLoadMoreButton] = useState(false);
   const [products, setProducts] = useState<ProductInterface[]>([]);

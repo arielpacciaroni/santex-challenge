@@ -3,26 +3,122 @@
 exports[`Product component should change the selected variant when the select input changes 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c7 {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  cursor: pointer;
+  color: #dcfce7;
+  background-color: #15803d;
+}
+
+.c7:hover {
+  background-color: #059669;
+}
+
+.c7:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.c5 {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.c5:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.c0 {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.c3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 0.5rem;
+}
+
+.c1 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.c4 {
+  color: #666;
+  margin: 1rem 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    height: 300px;
+  }
+}
+
+<body>
     <div>
       <div
-        class="sc-eqUAAy geIxsC"
+        class="c0"
       >
         <img
           alt="Product name"
-          class="sc-iGgWBj fUxJYM"
+          class="c1"
           src="https://via.placeholder.com/300"
         />
         <div
-          class="sc-dcJsrY cTqVHv"
+          class="c2"
         >
           <h2
-            class="sc-fqkvVR iLuOC"
+            class="c3"
           >
             Product name
           </h2>
           <p
-            class="sc-gsFSXq fifgtg"
+            class="c4"
           >
             Product description
           </p>
@@ -30,7 +126,7 @@ Object {
             Choose a variant:
           </p>
           <select
-            class="sc-gEvEer dJWUhf"
+            class="c5"
           >
             <option
               value="1"
@@ -44,10 +140,10 @@ Object {
             </option>
           </select>
           <div
-            class="sc-kAyceB iJPHlp"
+            class="c6"
           >
             <button
-              class="sc-aXZVg fmhrVe"
+              class="c7"
             >
               Buy
             </button>
@@ -56,25 +152,121 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .c7 {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  cursor: pointer;
+  color: #dcfce7;
+  background-color: #15803d;
+}
+
+.c7:hover {
+  background-color: #059669;
+}
+
+.c7:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.c5 {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.c5:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.c0 {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.c3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 0.5rem;
+}
+
+.c1 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.c4 {
+  color: #666;
+  margin: 1rem 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    height: 300px;
+  }
+}
+
+<div>
     <div
-      class="sc-eqUAAy geIxsC"
+      class="c0"
     >
       <img
         alt="Product name"
-        class="sc-iGgWBj fUxJYM"
+        class="c1"
         src="https://via.placeholder.com/300"
       />
       <div
-        class="sc-dcJsrY cTqVHv"
+        class="c2"
       >
         <h2
-          class="sc-fqkvVR iLuOC"
+          class="c3"
         >
           Product name
         </h2>
         <p
-          class="sc-gsFSXq fifgtg"
+          class="c4"
         >
           Product description
         </p>
@@ -82,7 +274,7 @@ Object {
           Choose a variant:
         </p>
         <select
-          class="sc-gEvEer dJWUhf"
+          class="c5"
         >
           <option
             value="1"
@@ -96,10 +288,10 @@ Object {
           </option>
         </select>
         <div
-          class="sc-kAyceB iJPHlp"
+          class="c6"
         >
           <button
-            class="sc-aXZVg fmhrVe"
+            class="c7"
           >
             Buy
           </button>
@@ -164,26 +356,122 @@ Object {
 exports[`Product component should render a product 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c7 {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  cursor: pointer;
+  color: #dcfce7;
+  background-color: #15803d;
+}
+
+.c7:hover {
+  background-color: #059669;
+}
+
+.c7:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.c5 {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.c5:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.c0 {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.c3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 0.5rem;
+}
+
+.c1 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.c4 {
+  color: #666;
+  margin: 1rem 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    height: 300px;
+  }
+}
+
+<body>
     <div>
       <div
-        class="sc-eqUAAy geIxsC"
+        class="c0"
       >
         <img
           alt="Product name"
-          class="sc-iGgWBj fUxJYM"
+          class="c1"
           src="https://via.placeholder.com/300"
         />
         <div
-          class="sc-dcJsrY cTqVHv"
+          class="c2"
         >
           <h2
-            class="sc-fqkvVR iLuOC"
+            class="c3"
           >
             Product name
           </h2>
           <p
-            class="sc-gsFSXq fifgtg"
+            class="c4"
           >
             Product description
           </p>
@@ -191,7 +479,7 @@ Object {
             Choose a variant:
           </p>
           <select
-            class="sc-gEvEer dJWUhf"
+            class="c5"
           >
             <option
               value="1"
@@ -200,10 +488,10 @@ Object {
             </option>
           </select>
           <div
-            class="sc-kAyceB iJPHlp"
+            class="c6"
           >
             <button
-              class="sc-aXZVg fmhrVe"
+              class="c7"
             >
               Buy
             </button>
@@ -212,25 +500,121 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .c7 {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  cursor: pointer;
+  color: #dcfce7;
+  background-color: #15803d;
+}
+
+.c7:hover {
+  background-color: #059669;
+}
+
+.c7:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.c5 {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.c5:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.c0 {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.c3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 0.5rem;
+}
+
+.c1 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.c4 {
+  color: #666;
+  margin: 1rem 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    height: 300px;
+  }
+}
+
+<div>
     <div
-      class="sc-eqUAAy geIxsC"
+      class="c0"
     >
       <img
         alt="Product name"
-        class="sc-iGgWBj fUxJYM"
+        class="c1"
         src="https://via.placeholder.com/300"
       />
       <div
-        class="sc-dcJsrY cTqVHv"
+        class="c2"
       >
         <h2
-          class="sc-fqkvVR iLuOC"
+          class="c3"
         >
           Product name
         </h2>
         <p
-          class="sc-gsFSXq fifgtg"
+          class="c4"
         >
           Product description
         </p>
@@ -238,7 +622,7 @@ Object {
           Choose a variant:
         </p>
         <select
-          class="sc-gEvEer dJWUhf"
+          class="c5"
         >
           <option
             value="1"
@@ -247,10 +631,10 @@ Object {
           </option>
         </select>
         <div
-          class="sc-kAyceB iJPHlp"
+          class="c6"
         >
           <button
-            class="sc-aXZVg fmhrVe"
+            class="c7"
           >
             Buy
           </button>
